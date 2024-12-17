@@ -1,0 +1,102 @@
+/* إعدادات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+/* تنسيق البوكسات */
+.menu-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.nav-box {
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-box:hover {
+    background-color: #e63946; /* لون مميز عند التفاعل */
+    transform: scale(1.1); /* تكبير عند التفاعل */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق الأقسام */
+.menu-category {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-top: 2px solid #ddd;
+}
+
+.menu-category h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: #ebf5ed;
+    margin-bottom: 1rem;
+}
+
+/* إعدادات الشبكة لعناصر القائمة */
+.menu-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* عناصر القائمة */
+.menu-item {
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* الصور */
+.menu-image {
+    width: 100%; /* اجعل الصورة تأخذ عرض العنصر بالكامل */
+    height: 200px; /* تقليل ارتفاع الصور */
+    object-fit: cover; /* تأكد من ظهور الصورة بشكل جميل مهما كان أبعادها الأصلية */
+    border-radius: 8px; /* حواف مدورة */
+}
+
+@media (max-width: 768px) {
+    .menu-image {
+        height: 120px; /* تصغير الصور أكثر للأجهزة الصغيرة */
+    }
+}
+    .nav-box {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    /* تمكين التمرير السلس */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #af6011; /* لون كريمي دافئ */
+}
+}
