@@ -1,4 +1,2 @@
-function sendMessage(event) {
-  event.preventDefault();
-  alert("Message sent! We'll get back to you soon.");
-}
+// Placeholder for future animations or interactions
+console.log("Website Loaded");
