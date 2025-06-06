@@ -13,19 +13,27 @@ body {
 
 header {
   height: 100vh;
-  background: url('BARBER1') center/cover no-repeat;
+  background: url('BARBER1.jpeg') center/cover no-repeat;
   position: relative;
   text-align: center;
   color: #fff;
 }
 
 header .overlay {
-  background-color: rgba(236, 227, 227, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+}
+
+.logo-center {
+  width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
 }
 
 h1 {
@@ -50,19 +58,30 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
-.book-now-btn {
+}
+
+.button-wrapper {
   margin-top: 30px;
-  padding: 18px 40px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.book-now-btn,
+.location-btn {
+  padding: 16px 35px;
   border-radius: 50px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-now-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
 }
 
 .book-now-btn:hover {
@@ -70,24 +89,16 @@ h1 {
   box-shadow: 0 0 25px rgba(37, 211, 102, 0.9);
 }
 
-/* حركة نابضه */
-.pulse {
-  animation: pulseAnim 2s infinite;
+.location-btn {
+  background: linear-gradient(135deg, #444, #222);
+  color: white;
 }
 
-@keyframes pulseAnim {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+.location-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Services */
 section {
   padding: 60px 20px;
   max-width: 1200px;
@@ -109,7 +120,7 @@ h2 {
 }
 
 .service-card {
-  background-color: #070707;
+  background-color: #111;
   padding: 25px;
   width: 250px;
   border-radius: 12px;
@@ -131,7 +142,6 @@ h2 {
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-/* Gallery */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -149,7 +159,6 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 30px;
@@ -157,10 +166,13 @@ footer {
   color: #aaa;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
+  }
+
+  .logo-center {
+    width: 160px;
   }
 
   .service-list {
@@ -168,89 +180,7 @@ footer {
     align-items: center;
   }
 
-  .book-now-btn {
-    padding: 12px 25px;
-    font-size: 1rem;
+  .button-wrapper {
+    flex-direction: column;
   }
-  .logo-center {
-    display: block;
-    margin: 0 auto 25px auto;
-    width: 180px;
-    max-width: 90%;
-    height: auto;
-    animation: slideFade 1s ease-out forwards;
-    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
-  }
-  /* ==== Location Section ==== */
-.location-section {
-  text-align: center;
-  padding: 60px 20px;
-  background: #f4f4f4;
-  color: #222;
-}
-
-.location-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #111;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.location-section p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-}
-
-.location-btn {
-  padding: 16px 35px;
-  background: linear-gradient(135deg, #444, #222);
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-}
-
-.location-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
-  /* Button Design */
-.book-now-btn,
-.location-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  margin: 10px;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.book-now-btn {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: white;
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
-}
-
-.book-now-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(37, 211, 102, 0.9);
-}
-
-.location-btn {
-  background: linear-gradient(135deg, #444, #222);
-  color: white;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-}
-
-.location-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
 }
