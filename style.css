@@ -181,5 +181,42 @@ footer {
     animation: slideFade 1s ease-out forwards;
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
   }
-  
+  /* ==== Location Section ==== */
+.location-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.location-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #111;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.location-section p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.location-btn {
+  padding: 16px 35px;
+  background: linear-gradient(135deg, #444, #222);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.location-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
 }
