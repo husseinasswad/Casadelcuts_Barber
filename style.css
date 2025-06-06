@@ -183,4 +183,16 @@ footer {
   .button-wrapper {
     flex-direction: column;
   }
+  .logo-top {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo-large {
+  width: 220px;
+  max-width: 90%;
+  height: auto;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
+}
 }
